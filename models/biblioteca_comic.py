@@ -111,4 +111,5 @@ class BibliotecaComic(models.Model):
                 #Si procede, lanzamos una excepcion
                 raise models.ValidationError('La fecha de lanzamiento debe ser anterior a la actual')
 
-
+    #Relacion con socios
+    socio_id = fields.Many2one('biblioteca.socio', string='Socio Prestador', ondelete='restrict')
