@@ -7,8 +7,8 @@ class BibliotecaSocio(models.Model):
     _name = 'biblioteca.socio'
     _description = 'Socio de la biblioteca'
 
-    nombre = fields.Char('Nombre', required=True)
-    apellido = fields.Char('Apellido', required=True)
-    identificador = fields.Char('Identificador', required=True, index=True, unique=True)
+    nombre = fields.Char('Nombre')
+    apellido = fields.Char('Apellido')
+    identificador = fields.Char('Identificador')
 
-    comics_prestados = fields.One2many('biblioteca.comic', 'socio_id', string='Cómics Prestados')
+    idPrestamos = fields.One2many('biblioteca.prestamo', 'idSocio', string='Préstamos')
