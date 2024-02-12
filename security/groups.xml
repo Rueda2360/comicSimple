@@ -13,7 +13,6 @@
         <!-- Para otros casos, podriamos incluir a un grupo creado en Odoo que nos interese
             (jefes, encargados, empleados, etc.) -->
 
-        <field name="write" eval="1"/>
     
     </record>
 </odoo>

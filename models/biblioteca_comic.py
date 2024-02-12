@@ -112,5 +112,5 @@ class BibliotecaComic(models.Model):
                 raise models.ValidationError('La fecha de lanzamiento debe ser anterior a la actual')
 
     #Relacion con socios
-    idPrestamos = fields.One2many('biblioteca.prestamo', 'idComic', string='Préstamos')
+    idSocio = fields.One2many('biblioteca.prestamo', 'idComic', string='Préstamos')
     

@@ -46,7 +46,7 @@
                         <field name="estado"/>
                         <field name="paginas"/>
                         <field name="activo" readonly="1"/>
-                        <field name="socio_id"/>
+                        <field name="idSocio"/>
                         
                     </group>
                     <group>
@@ -77,7 +77,7 @@
                 <field name="nombre"/>
                 <field name="fecha_publicacion"/>                        
                 <field name="estado"/>
-                <field name="socio_id"/>
+                <field name="idSocio"/>
             </tree>
         </field>
     </record>
@@ -90,7 +90,7 @@
             <search>
                 <field name="nombre"/>
                 <field name="autor_ids"/>
-                <field name="socio_id" string="Socio"/>
+                <field name="idSocio" string="Socio"/>
 
                 <!-- Indicamos que para si filtramos por los del dominio "autor_ids=false" 
                 se muestre el texto "Sin autor"-->
