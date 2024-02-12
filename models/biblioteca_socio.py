@@ -11,4 +11,4 @@ class BibliotecaSocio(models.Model):
     apellido = fields.Char('Apellido')
     identificador = fields.Char('Identificador')
 
-    idSocio = fields.One2many('biblioteca.prestamo', 'idSocio', string='Préstamos')
+    idSocio = fields.Many2many('biblioteca.prestamo', 'idSocio', string='Préstamos')
