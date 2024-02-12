@@ -113,3 +113,5 @@ class BibliotecaComic(models.Model):
 
     #Relacion con socios
     socio_id = fields.Many2one('biblioteca.socio', string='Socio Prestador', ondelete='restrict')
+    prestamos_ids = fields.One2many('biblioteca.prestamo', 'comic_id', string='Préstamos')
+

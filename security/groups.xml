@@ -12,5 +12,8 @@
         <field name="users" eval="[(4, ref('base.user_admin'))]" />
         <!-- Para otros casos, podriamos incluir a un grupo creado en Odoo que nos interese
             (jefes, encargados, empleados, etc.) -->
+
+        <field name="write" eval="1"/>
+    
     </record>
 </odoo>

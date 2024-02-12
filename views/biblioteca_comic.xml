@@ -46,6 +46,9 @@
                         <field name="estado"/>
                         <field name="paginas"/>
                         <field name="activo" readonly="1"/>
+                        <field name="socio_id"/>
+                        <field name="prestamos_ids" widget="many2many_tags" options="{'no_create_edit': True}" />
+
                     </group>
                     <group>
                         <field name="precio"/>
@@ -75,6 +78,8 @@
                 <field name="nombre"/>
                 <field name="fecha_publicacion"/>                        
                 <field name="estado"/>
+                <field name="socio_id"/>
+                <field name="prestamos_ids"/>
             </tree>
         </field>
     </record>
@@ -87,6 +92,8 @@
             <search>
                 <field name="nombre"/>
                 <field name="autor_ids"/>
+                <field name="socio_id" string="Socio"/>
+
                 <!-- Indicamos que para si filtramos por los del dominio "autor_ids=false" 
                 se muestre el texto "Sin autor"-->
                 <filter string="Sin autor" name="sin_autor" domain="[('autor_ids','=',False)]"/>
