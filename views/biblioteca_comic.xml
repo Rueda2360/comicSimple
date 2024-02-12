@@ -47,8 +47,7 @@
                         <field name="paginas"/>
                         <field name="activo" readonly="1"/>
                         <field name="socio_id"/>
-                        <field name="prestamos_ids" widget="many2many_tags" options="{'no_create_edit': True}" />
-
+                        
                     </group>
                     <group>
                         <field name="precio"/>
@@ -79,7 +78,6 @@
                 <field name="fecha_publicacion"/>                        
                 <field name="estado"/>
                 <field name="socio_id"/>
-                <field name="prestamos_ids"/>
             </tree>
         </field>
     </record>
