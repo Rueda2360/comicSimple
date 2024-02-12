@@ -89,24 +89,5 @@
 
 
     <!-- Socios -->
-    <record id="biblioteca_socio_menu" model="ir.ui.view">
-        <field name="name">Lista de Socios de la biblioteca</field>
-        <field name="model">biblioteca.socio</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="nombre"/>
-                <field name="apellido"/>
-                <field name="identificador"/>
-            </tree>
-        </field>
-    </record>
 
-    <record id='biblioteca_socio_list_action' model='ir.actions.act_window'>
-        <field name="name">Lista de Socios</field>
-        <field name="res_model">biblioteca.socio</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-
-    <menuitem name="Lista de Socios" id="biblioteca_socio_menu" parent="biblioteca_comic_menu" action="biblioteca_socio_list_action"/>
 </odoo>
