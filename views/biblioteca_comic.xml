@@ -14,7 +14,6 @@
     <!-- Simple menu item, sin más utilidad que la didáctica -->
     <menuitem name="Mi biblioteca (Simple)" id="biblioteca_base_menu" />
     <menuitem name="Comics" id="biblioteca_comic_menu" parent="biblioteca_base_menu" action="biblioteca_comic_action"/>
-    <menuitem name="Socios" id="biblioteca_socio_menu" parent="biblioteca_comic_menu" action="biblioteca_socio_action"/>
 
     <!-- Definición de la Vista formulario -->
     <record id="biblioteca_comic_view_form" model="ir.ui.view">
@@ -87,4 +86,26 @@
         </field>
     </record>
 
+
+
+    <!-- Socios -->
+    <record id="biblioteca_socio_menu" model="ir.ui.view">
+        <field name="name">Lista de Socios de la biblioteca</field>
+        <field name="model">biblioteca.socio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellido"/>
+                <field name="identificador"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="biblioteca_socio_action" model="ir.actions.act_window">
+        <field name="name">Biblioteca de Socios</field>
+        <field name="res_model">biblioteca.socio</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="Socios" id="biblioteca_socio_menu" parent="biblioteca_base_menu" action="biblioteca_socio_action"/>
 </odoo>
