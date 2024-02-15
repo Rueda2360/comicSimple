@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from datetime import timedelta
+from openerp.exceptions import ValidationError
 
 class BibliotecaPrestamo(models.Model):
     _name = 'biblioteca.prestamo'
@@ -15,3 +17,16 @@ class BibliotecaPrestamo(models.Model):
 
     def devolver_comic(self):
         self.devuelto = True
+
+    @api.constrains('fechaInicio')
+    def funcionFechaPrestamo(self):
+        for registro in self:
+            if registro.fechaInicio and registro.fechaInicio > fields.Date.today():
+                raise ValidationError('La fecha de préstamo no puede ser posterior al día de hoy.')
+
+    @api.constrains('fechaDevolucion')
+    def funcionFechaDevolucion(self):
+        for registro in self:
+            yesterday = fields.Date.today() - timedelta(days=1)
+            if registro.fechaDevolucion and registro.fechaDevolucion < yesterday:
+                raise ValidationError('La fecha prevista de vuelta no puede ser anterior al día de ayer.')
