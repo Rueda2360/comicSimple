@@ -27,7 +27,7 @@
 
 
     <!-- Simple menu item, sin más utilidad que la didáctica -->
-      <menuitem name="Mi biblioteca" id="biblioteca_base_menu" />
+    <menuitem name="Mi biblioteca de comics" id="biblioteca_base_menu" />
     <menuitem name="Comics" id="biblioteca_comic_menu" parent="biblioteca_base_menu" action="biblioteca_comic_action"/>
     <menuitem name="Socios" id="biblioteca_socio_menu" parent="biblioteca_base_menu" action="biblioteca_socio_action"/>
     <menuitem name="Préstamos" id="biblioteca_prestamo_menu" parent="biblioteca_base_menu" action="biblioteca_prestamo_action"/>
@@ -87,7 +87,33 @@
             </tree>
         </field>
     </record>
+    <record id="biblioteca_socio_view_tree" model="ir.ui.view">
+        <field name="name">Lista de Socios de la biblioteca</field>
+        <field name="model">biblioteca.socio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="identificador"/>
+                <field name="nombre"/>                        
+                <field name="apellido"/>
+            </tree>
+        </field>
+    </record>
+    <record id="biblioteca_prestamo_view_tree" model="ir.ui.view">
+        <field name="name">Lista de Préstamos de la biblioteca</field>
+        <field name="model">biblioteca.prestamo</field>
+        <field name="arch" type="xml">
+            <tree>
 
+                <field name="nombreLibro"/>
+                <field name="devuelto"/>                
+                <field name="nombreSocio"/>
+                <field name="apellidosSocio"/>  
+                <field name="fechaInicio"/>
+                <field name="fechaDevolucion"/>                        
+
+            </tree>
+        </field>
+    </record>
     <!-- Definición de la vista busqueda-->
     <record id="biblioteca_comic_view_search" model="ir.ui.view">
         <field name="name">Búsqueda de Comics en la biblioteca</field>
