@@ -104,9 +104,9 @@
         <field name="arch" type="xml">
             <tree>
 
-                <field name="nombreLibro"/>
+                <field name="idComic"/>
                 <field name="devuelto"/>                
-                <field name="nombreSocio"/>
+                <field name="idSocio"/>
                 <field name="fechaInicio"/>
                 <field name="fechaDevolucion"/>                        
 

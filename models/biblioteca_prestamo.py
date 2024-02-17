@@ -13,9 +13,9 @@ class BibliotecaPrestamo(models.Model):
     fechaInicio = fields.Date('Fecha de inicio', default=fields.Date.today(), required=True)
     fechaDevolucion = fields.Date('Fecha de devolución prevista', required=True)
 
-    nombreLibro = fields.Char(related='idComic.nombre', string='Nombre del Libro')
-    nombreSocio = fields.Char(related='idSocio.nombre', string='Nombre del Socio')
-    apellidosSocio = fields.Char(related='idSocio.apellido', string='Apellidos del Socio')
+#    nombreLibro = fields.Char(related='idComic.nombre', string='Nombre del Libro')
+#    nombreSocio = fields.Char(related='idSocio.nombre', string='Nombre del Socio')
+#    apellidosSocio = fields.Char(related='idSocio.apellido', string='Apellidos del Socio')
     
     devuelto = fields.Boolean('Devuelto', default=False)
 
