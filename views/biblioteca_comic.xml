@@ -107,7 +107,6 @@
                 <field name="nombreLibro"/>
                 <field name="devuelto"/>                
                 <field name="nombreSocio"/>
-                <field name="apellidosSocio"/>  
                 <field name="fechaInicio"/>
                 <field name="fechaDevolucion"/>                        
 
